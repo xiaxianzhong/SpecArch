@@ -40,15 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IAggregateRoot.cs" />
+    <Compile Include="IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\IRepositoryContext.cs" />
+    <Compile Include="Repositories\SortOrder.cs" />
+    <Compile Include="Specifications\ISpecification.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\" />
     <Folder Include="Models\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Services\" />
-    <Folder Include="Specifications\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpecArch.Infrastructure\SpecArch.Infrastructure.csproj">
+      <Project>{CBE025A1-FA14-4787-B8A8-7BC36A82B40C}</Project>
+      <Name>SpecArch.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
